@@ -1,4 +1,13 @@
-adblock = true;
+$.ajax({
+    url: './assets/ads.js',
+    success: _ => {
+        adblock = false;
+    },
+    error: _ => {
+        adblock = true;
+        alert('Please Disable Adblock Extension.');
+    }
+})
 $('.get').click(function () {
     if (adblock) {
         alert('Please Disable Adblock Extension.');
