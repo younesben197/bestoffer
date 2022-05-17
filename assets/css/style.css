@@ -54,7 +54,7 @@ hr{
     height: fit-content;
     text-align: center;
 }
-.intro .content h2{
+.intro .content h3{
 	font-size: 47px;
     width: 82%;
     text-align: center;
@@ -156,7 +156,7 @@ hr{
 .Cards.WatchOffline{
 	flex-direction: row-reverse;
 }
-.Cards h1{
+.Cards h2{
 	font-size: 35px;
 }
 .Cards h2{
