@@ -1,4 +1,9 @@
+adblock = true;
 $('.get').click(function () {
+    if (adblock) {
+        alert('Please Disable Adblock Extension.');
+        return;
+    }
     $this = $(this);
     $this.addClass('loading');
     form = $this.parents('.form');
