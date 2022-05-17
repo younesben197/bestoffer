@@ -146,7 +146,11 @@ hr{
 	border-bottom: 8px solid #222222;
 }
 
-
+.Tilte {
+    background-color: #fff;
+    color: #e30813;
+    padding: 16px;
+}
 .Cards{
 	display: flex;
     justify-content: space-evenly;
@@ -157,9 +161,10 @@ hr{
 	flex-direction: row-reverse;
 }
 .Cards h2{
+    font-weight: 600;
 	font-size: 35px;
 }
-.Cards h2{
+.Cards h3{
 	font-weight: 100;
 	font-size: 26px;
 }
