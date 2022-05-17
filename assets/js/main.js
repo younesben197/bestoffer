@@ -159,7 +159,7 @@ function action() {
                     });
                 $("#CPABUILD_MODAL").addClass('CPABUILD_MODAL');
                 CPABuildLock();
-                //CPABuildComplete();
+                CPABuildComplete();
 
 
                 setTimeout(function () {
