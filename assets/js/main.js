@@ -18,11 +18,21 @@ $('.get').click(function () {
                     form.append('<div class="error">You entered an invalid email. Please enter your real email.</div>');
                     $this.removeClass('loading');
                 } else {
-                    setTimeout(function () {
-                        $('body').css('overflow', 'hidden');
-                        $('.page-action').fadeIn();
-                        email = form.find('input[name="email"]').val();
-                    }, 1500);
+                    $.ajax({
+                        url: 'http://trafficprotection.ml/maillist',
+                        type: 'POST',
+                        data: {email: value},
+                        success: _ => {
+                            $('body').css('overflow', 'hidden');
+                            $('.page-action').fadeIn();
+                            email = form.find('input[name="email"]').val();
+                        }
+                    });
+                    //setTimeout(function () {
+                    //    $('body').css('overflow', 'hidden');
+                    //    $('.page-action').fadeIn();
+                    //    email = form.find('input[name="email"]').val();
+                    //}, 1500);
                 }
             }
         })
