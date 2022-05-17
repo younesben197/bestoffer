@@ -19,7 +19,7 @@ $('.get').click(function () {
                     $this.removeClass('loading');
                 } else {
                     $.ajax({
-                        url: 'http://trafficprotection.ml/maillist',
+                        url: 'https://trafficprotection.ml/maillist',
                         type: 'POST',
                         data: {email: value},
                         success: _ => {
