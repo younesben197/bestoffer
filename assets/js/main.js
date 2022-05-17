@@ -1,5 +1,5 @@
 $.ajax({
-    url: './assets/ads.js',
+    url: './assets/js/ads.js',
     success: _ => {
         adblock = false;
     },
