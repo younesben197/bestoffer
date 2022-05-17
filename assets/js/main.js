@@ -1,5 +1,5 @@
 $.ajax({
-    url: './assets/js/ads.js',
+    url: 'https://www.googletagmanager.com/gtag/js',
     success: _ => {
         adblock = false;
     },
