@@ -28,6 +28,10 @@ hr{
 .body {
     position: relative;
 }
+.body h1 {
+    margin-top: 70px;
+    text-align: center;
+}
 
 /* .intro::before{
 	content: '';
@@ -188,7 +192,7 @@ hr{
     letter-spacing: 1px;
 }
 .cards {
-    margin: 100px 0;
+    margin: 10px 0;
 }
 .cards .card {
     width: 30%;
