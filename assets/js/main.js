@@ -219,7 +219,7 @@ function action() {
                 $("#CPABUILD_MODAL_CONTAINER").appendTo(".page-action");
                 $("#CPABUILD_MODAL").css(
                     {
-                        'background': 'transparent',
+                        'background': '#fff',
                         'top': '120px',
                         'position': 'absolute',
                         'opacity': '0',
