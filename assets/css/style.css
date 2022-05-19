@@ -28,7 +28,7 @@ hr{
 .body {
     position: relative;
 }
-.body h1 {
+.body h2 {
     margin-top: 70px;
     text-align: center;
 }
@@ -298,9 +298,9 @@ hr{
     font-size: 20px;
     margin: 6px 0;
 }
-.guide li h2{
+.guide li h3{
 	margin: 0 0 6px 0;
-    font-size: 20px;
+    font-size: 18px;
 }
 .guide li p{
     margin: 0;
