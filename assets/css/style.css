@@ -700,8 +700,8 @@ table.PlansFeatures .plansGrid .active:after{
     width: 100%;
 }
 .cards .card {
-    width: 96%;
-    margin: 22px 2%;
+    width: 92%;
+    margin: 22px 4%;
 }
 .guide ul{
 	width: 80%;
@@ -710,6 +710,7 @@ table.PlansFeatures .plansGrid .active:after{
 	width: 80%;
 }
 .form{
+    width: 100%;
     margin: auto;
     height: unset;
     text-align: center;
